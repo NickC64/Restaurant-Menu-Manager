@@ -14,6 +14,7 @@ import java.util.function.Supplier;
 import java.util.regex.PatternSyntaxException;
 
 import javax.swing.Box;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
@@ -36,6 +37,7 @@ import javax.swing.table.TableRowSorter;
 import restaurantMenuManager.Menu;
 import restaurantMenuManager.MenuItem;
 import restaurantMenuManager.Order;
+import util.ImageUtil;
 import util.PriceUtil;
 
 /*
@@ -182,6 +184,12 @@ public class OrderTab extends JPanel implements Supplier<Menu>, OrderUpdater, Me
 					}
 
 					return "no";
+				} else if (value instanceof ImageIcon) {
+					
+					if (!ms.get().get(rowIndex).isAvailable()) {
+						
+						value = ImageUtil.desaturate((ImageIcon) value);
+					}
 				}
 
 				return value;

@@ -68,8 +68,6 @@ public class ReceiptTable extends Table {
 		String s = currentTimestamp.toString().split("\\.")[0];
 		dm.setValueAt("Timestamp", i + 3, 0);
 		dm.setValueAt(s, i + 3, 2);
-
-		System.out.println(dm.getRowCount());
 	}
 
 	@Override
