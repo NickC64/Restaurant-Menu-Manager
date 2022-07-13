@@ -1,6 +1,6 @@
 # Restaurant-Menu-Manager
 Restaurant menu manager created for grade 12 computer science final project
-![image](https://user-images.githubusercontent.com/97940747/178794110-0c307822-983c-4f77-889f-b264b9fd58f3.png)
+![image](https://user-images.githubusercontent.com/97940747/178812149-6f90762a-2f99-4657-a2d9-2423011fca4d.png)
 
 **Video Demonstration:**
 https://youtu.be/IOwlr3os8wM
