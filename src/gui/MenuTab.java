@@ -221,7 +221,7 @@ public class MenuTab extends JPanel implements Supplier<Menu>, MenuUpdater {
 						continue;
 					}
 
-					if (menuSubscribable.getName(i).equals(name)) {
+					if (menuSubscribable.getName(i).equalsIgnoreCase(name)) {
 
 						return true;
 					}
@@ -337,7 +337,7 @@ public class MenuTab extends JPanel implements Supplier<Menu>, MenuUpdater {
 		@Override
 		public void valueChanged(ListSelectionEvent e) {
 
-			if (!e.getValueIsAdjusting()) {
+			if (!e.getValueIsAdjusting() && menuTable.isFocusOwner()) {
 				int numRowsSelected = menuTable.getSelectedRowCount();
 
 				switch (numRowsSelected) {
@@ -405,7 +405,7 @@ public class MenuTab extends JPanel implements Supplier<Menu>, MenuUpdater {
 
 			for (int i = 0; i < menuSubscribable.size(); i++) {
 
-				if (menuSubscribable.getName(i).equals(name)) {
+				if (menuSubscribable.getName(i).equalsIgnoreCase(name)) {
 
 					return true;
 				}
